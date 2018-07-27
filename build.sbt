@@ -1,4 +1,5 @@
 import Dependencies._
+import org.scalajs.core.tools.linker.backend.ModuleKind.CommonJSModule
 
 //lazy val root = (project in file(".")).
 //  settings(
@@ -22,5 +23,6 @@ libraryDependencies += scalaTest % Test
 scalaJSUseMainModuleInitializer := false
 scalaJSModuleKind := ModuleKind.CommonJSModule
 scalacOptions += "-P:scalajs:sjsDefinedByDefault"
+scalaJSModuleKind := CommonJSModule
 
 enablePlugins(ScalaJSPlugin)
